@@ -5,7 +5,7 @@ public class Problem {
         int[] arrsource1 = {2,3,1};
         int[] arrsource2 = {5,4,8};
         int[] arrsource3 = {5,6,8};
-        
+
         Source source1 = new Source("shop1",SourceTypes.FACTORY,arrsource1);
         Source source2 = new Source("shop2",SourceTypes.WAREHOUSE,arrsource2);
         Source source3 = new Source("shop3",SourceTypes.WAREHOUSE,arrsource3);

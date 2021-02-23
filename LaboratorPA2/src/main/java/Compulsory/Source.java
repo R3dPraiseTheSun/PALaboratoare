@@ -1,5 +1,7 @@
 package Compulsory;
 
+import java.util.Arrays;
+
 public class Source {
     private String name;
     private int[] capacity;
@@ -33,5 +35,14 @@ public class Source {
 
     public int[] getCapacity(){
         return this.capacity;
+    }
+
+    @Override
+    public String toString() {
+        return "Source{" +
+                "name='" + name + '\'' +
+                ", capacity=" + Arrays.toString(capacity) +
+                ", type=" + type +
+                '}';
     }
 }
