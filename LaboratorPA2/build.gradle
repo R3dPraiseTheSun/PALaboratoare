@@ -1,8 +1,18 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 version '1.0-SNAPSHOT'
+
+apply plugin : "java"
+ext {
+    javaMainClass = "src.main.java.pkg.Problem"
+}
+
+application {
+    mainClassName = javaMainClass
+}
 
 repositories {
     mavenCentral()

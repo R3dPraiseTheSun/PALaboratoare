@@ -1,0 +1,14 @@
+-d 'C:\\Users\\paula\\Desktop\\LABPA\\build\\reports\\rest-api-docs'
+-doclet 'com.lunatech.doclets.jax.jaxrs.JAXRSDoclet'
+-doctitle 'Lab2 1.0-SNAPSHOT API'
+-jaxrscontext 'http://localhost:8080/myapp'
+-notimestamp 
+-quiet 
+-windowtitle 'Lab2 1.0-SNAPSHOT API'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Destination.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Factory.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Problem.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Solution.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Source.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\SourceTypes.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Warehouse.java'

@@ -1,8 +1,16 @@
-Compulsory/SourceTypes.java
- Compulsory.SourceTypes
-Compulsory/Source.java
- Compulsory.Source
-Compulsory/Destination.java
- Compulsory.Destination
-Compulsory/Problem.java
- Compulsory.Problem
+pkg/Problem.java
+ pkg.Problem
+pkg/Solution.java
+ pkg.Solution
+ pkg.Solution$1
+ pkg.Solution$minimumValueMatrix
+pkg/Warehouse.java
+ pkg.Warehouse
+pkg/Factory.java
+ pkg.Factory
+pkg/Destination.java
+ pkg.Destination
+pkg/SourceTypes.java
+ pkg.SourceTypes
+pkg/Source.java
+ pkg.Source
