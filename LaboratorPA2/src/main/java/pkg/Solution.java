@@ -8,7 +8,7 @@ public class Solution {
     private Destination[] destinations;
     private int[][] valuesMatrix;
 
-    private class minimumValueMatrix{
+    private static class minimumValueMatrix{
         int iPos,jPos;
         int value;
 
@@ -96,7 +96,7 @@ public class Solution {
         int[] supply = assignSupply(this.sources);
         minimumValueMatrix minimumVal = new minimumValueMatrix();
 
-        while(demandSum(demand) > 0){
+        while(demandSum(demand) > 0 && supplySum(supply) > 0){
             minimumVal = getMinimumValueMatrix(supply,demand);
 
             int supplyNow = supply[minimumVal.iPos];
@@ -110,8 +110,20 @@ public class Solution {
             cost += minimumVal.value * supplyNow;
             demand[minimumVal.jPos] -= supplyNow;
             supply[minimumVal.iPos] -= supplyNow;
+            for(int i=0,j=0;i< sources.length && j<destinations.length;i++,j++)
+                System.out.print(sources[i].getName() +
+                        ": Supply=" + supply[i] +
+                        " | " + destinations[j].getName() +
+                        ": Demand=" + demand[j] +
+                        "\n");
             for(int i=0;i< sources.length;i++)
-                System.out.print(sources[i].getName() + ": Supply=" + supply[i] + " | " + destinations[i].getName() + ": Demand=" + demand[i] + "\n");
+                System.out.print(sources[i].getName() +
+                        ": Supply=" + supply[i] +
+                        "\n");
+            for(int j=0;j< destinations.length;j++)
+                System.out.print(destinations[j].getName() +
+                        ": Demand=" + demand[j] +
+                        "\n");
             System.out.print("The demand sum is " + demandSum(demand) + "!\n");
         }
         System.out.print("The total cost is: " + cost + "!");
@@ -150,6 +162,12 @@ public class Solution {
     private int demandSum(int[] demand){
         int sum = 0;
         for (int j : demand) sum += j;
+        return sum;
+    }
+
+    private int supplySum(int[] supply){
+        int sum=0;
+        for(int j: supply) sum+= j;
         return sum;
     }
     private minimumValueMatrix getMinimumValueMatrix(int[] supply, int[] demand){

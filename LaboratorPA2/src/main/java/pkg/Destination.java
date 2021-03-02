@@ -1,5 +1,7 @@
 package pkg;
 
+import java.util.Objects;
+
 /**
  * <h1>Destination</h1>
  * <p><b>Destination</b> este o simpla clasa care retine numele si demandul unui oras sau al unei surse care genereaza demand!</p>
@@ -42,8 +44,17 @@ public class Destination {
                 ", demand=" + demand +
                 "}";
     }
+
     @Override
-    public boolean equals(Object obj){
-        return this == obj;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Destination that = (Destination) o;
+        return demand == that.demand && Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, demand);
     }
 }

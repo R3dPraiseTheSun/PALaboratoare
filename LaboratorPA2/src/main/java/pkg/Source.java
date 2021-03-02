@@ -1,6 +1,7 @@
 package pkg;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * <h1>Clasa abstracta Source</h1>
@@ -92,7 +93,17 @@ public abstract class Source {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return this == obj;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Source source = (Source) o;
+        return supply == source.supply && Objects.equals(name, source.name) && Arrays.equals(capacity, source.capacity) && Objects.equals(type, source.type);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(name, type, supply);
+        result = 31 * result + Arrays.hashCode(capacity);
+        return result;
     }
 }

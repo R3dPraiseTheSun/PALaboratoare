@@ -1,16 +1,20 @@
-pkg/Destination.java
- pkg.Destination
 pkg/SourceTypes.java
  pkg.SourceTypes
+pkg/Main.java
+ pkg.Main
+pkg/Warehouse.java
+ pkg.Warehouse
+pkg/Source.java
+ pkg.Source
+pkg/Factory.java
+ pkg.Factory
+pkg/Destination.java
+ pkg.Destination
 pkg/Problem.java
  pkg.Problem
 pkg/Solution.java
  pkg.Solution
  pkg.Solution$1
  pkg.Solution$minimumValueMatrix
-pkg/Warehouse.java
- pkg.Warehouse
-pkg/Factory.java
- pkg.Factory
-pkg/Source.java
- pkg.Source
+pkg/RandomProblem.java
+ pkg.RandomProblem
