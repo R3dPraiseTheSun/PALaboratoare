@@ -32,8 +32,8 @@ public class Solution {
      * @param destinations este un tip de data <i>'Destination[]</i> care ofera solutiei numele oraselor si demandul acestora.
      */
     public Solution(Source[] sources, Destination[] destinations){
-        if(!checkCorrectitude(sources)) System.out.println("[error]Sources are not different!\n");
-        if(!checkCorrectitude(destinations)) System.out.println("[error]Destinations are not different!\n");
+        if(!checkCorrectitude(sources)) {System.out.println("[error]Sources are not different!\n"); return;}
+        if(!checkCorrectitude(destinations)) {System.out.println("[error]Destinations are not different!\n"); return;}
         this.sources = new Source[sources.length];
         this.sources = sources;
         this.destinations = new Destination[sources.length];
@@ -41,22 +41,14 @@ public class Solution {
         this.valuesMatrix = new int[this.sources.length][this.destinations.length];
         assignMatrix();
     }
-
-    /**
-     * <p><b>printSources()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran sursele din variabila 'sources' de tip Source[]</p>
-     */
     public void printSources(){
         for (Source source : this.sources) System.out.println(source.toString());
     }
-    /**
-     * <p><b>printDestinations()</b> este o functie a clasei 'Solution', aceasta functie afiseaza pe ecran sursele din variabila 'destinations' de tip Destination[]</p>
-     */
+
     public void printDestinations(){
         for (Destination destination : this.destinations) System.out.println(destination.toString());
     }
-    /**
-     * <p><b>printMatrix()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran tabelul de Supply/Demand</p>
-     */
+
     public void printMatrix(){
         //header
         System.out.format("%6s","X|");
@@ -76,6 +68,7 @@ public class Solution {
         for (Destination destination : destinations) System.out.format("%15s|", destination.getDemand());
         System.out.format("%8s%s","","X|\n");
     }
+
     /**
      * <p><b>solveProblem()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran in primul rand traseele pe care algoritmul le vede cele mai bune,
      * apoi se afiseaza demandul ramas in total din destinatii, apoi la final cand demandul ajunge la 0 programul afiseaza pe ecran costul total acumulat din trasee.</p>
@@ -94,7 +87,7 @@ public class Solution {
         int cost = 0;
         int[] demand = assignDemand(this.destinations);
         int[] supply = assignSupply(this.sources);
-        minimumValueMatrix minimumVal = new minimumValueMatrix();
+        minimumValueMatrix minimumVal;
 
         while(demandSum(demand) > 0 && supplySum(supply) > 0){
             minimumVal = getMinimumValueMatrix(supply,demand);

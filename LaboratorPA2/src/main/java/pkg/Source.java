@@ -18,68 +18,31 @@ public abstract class Source {
         this.type = getType();
     }
 
-    /**
-     * <h3>setName</h3>
-     * <p>Acesta este setterul numelui din clasa Source.</p>
-     *
-     * @param name numele companiei.
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * <h3>setCapacity</h3>
-     * <p>seteaza capacitatea fabricii/depozitului.</p>
-     *
-     * @param capacity capacitatea fabricii/depozitului.
-     */
     public void setCapacity(int[] capacity) {
         this.capacity = capacity;
     }
 
-    /**
-     * <h3>setSupply</h3>
-     * <p>seteaza supply.ul unei fabrici/depozit.</p>
-     *
-     * @param supply supply.ul fabricii/depozitului.
-     */
     public void setSupply(int supply) {
         this.supply = supply;
     }
 
-    /**
-     * <h3>getName</h3>
-     *
-     * @return numele fabricii/depozitului.
-     */
     public String getName() {
         return this.name;
     }
 
-    /**
-     * <h3>getCapacity</h3>
-     *
-     * @return capacitatea fabricii/depozitului.
-     */
     public int[] getCapacity() {
         return this.capacity;
     }
 
-    /**
-     * <h3>getSupply</h3>
-     *
-     * @return supply.ul fabricii/depozitului.
-     */
     public int getSupply() {
         return this.supply;
     }
 
-    /**
-     * <h3>getType</h3>
-     * <p>Aceasta este functia abstracta care se regaseste in extensiile clasei Source</p>
-     * @return returneaza tipul de sursa de supply.
-     */
+
     public abstract String getType();
 
     @Override
