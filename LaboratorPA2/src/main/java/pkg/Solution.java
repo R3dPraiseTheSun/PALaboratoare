@@ -110,19 +110,19 @@ public class Solution {
             cost += minimumVal.value * supplyNow;
             demand[minimumVal.jPos] -= supplyNow;
             supply[minimumVal.iPos] -= supplyNow;
-            for(int i=0,j=0;i< sources.length && j<destinations.length;i++,j++)
-                System.out.print(sources[i].getName() +
-                        ": Supply=" + supply[i] +
-                        " | " + destinations[j].getName() +
-                        ": Demand=" + demand[j] +
+            for(int index=0,subIndex=0;index< sources.length && subIndex<destinations.length;index++,subIndex++)
+                System.out.print(sources[index].getName() +
+                        ": Supply=" + supply[index] +
+                        " | " + destinations[subIndex].getName() +
+                        ": Demand=" + demand[subIndex] +
                         "\n");
-            for(int i=0;i< sources.length;i++)
-                System.out.print(sources[i].getName() +
-                        ": Supply=" + supply[i] +
+            for(int index=0;index< sources.length;index++)
+                System.out.print(sources[index].getName() +
+                        ": Supply=" + supply[index] +
                         "\n");
-            for(int j=0;j< destinations.length;j++)
-                System.out.print(destinations[j].getName() +
-                        ": Demand=" + demand[j] +
+            for(int subIndex=0;subIndex< destinations.length;subIndex++)
+                System.out.print(destinations[subIndex].getName() +
+                        ": Demand=" + demand[subIndex] +
                         "\n");
             System.out.print("The demand sum is " + demandSum(demand) + "!\n");
         }
@@ -130,52 +130,52 @@ public class Solution {
     }
 
     private boolean checkCorrectitude(Source[] sources){
-        for(int i=1;i<sources.length;i++){
-            if(sources[i-1].equals(sources[i]))
+        for(int index=1;index<sources.length;index++){
+            if(sources[index-1].equals(sources[index]))
                 return false;
         }
         return true;
     }
     private boolean checkCorrectitude(Destination[] destinations){
-        for(int i=1;i<destinations.length;i++){
-            if(destinations[i-1].equals(destinations[i]))
+        for(int index=1;index<destinations.length;index++){
+            if(destinations[index-1].equals(destinations[index]))
                 return false;
         }
         return true;
     }
     private void assignMatrix(){
-        for(int i=0;i<valuesMatrix.length;i++){
-            valuesMatrix[i] = sources[i].getCapacity();
+        for(int index=0;index<valuesMatrix.length;index++){
+            valuesMatrix[index] = sources[index].getCapacity();
         }
     }
 
     private int[] assignSupply(Source[] sources){
         int[] supply = new int[sources.length];
-        for(int i=0;i<sources.length;i++) supply[i] = sources[i].getSupply();
+        for(int index=0;index<sources.length;index++) supply[index] = sources[index].getSupply();
         return supply;
     }
     private int[] assignDemand(Destination[] destinations){
         int[] demand = new int[destinations.length];
-        for(int i=0;i<destinations.length;i++) demand[i] = destinations[i].getDemand();
+        for(int index=0;index<destinations.length;index++) demand[index] = destinations[index].getDemand();
         return demand;
     }
     private int demandSum(int[] demand){
         int sum = 0;
-        for (int j : demand) sum += j;
+        for (int index : demand) sum += index;
         return sum;
     }
 
     private int supplySum(int[] supply){
         int sum=0;
-        for(int j: supply) sum+= j;
+        for(int index: supply) sum+= index;
         return sum;
     }
     private minimumValueMatrix getMinimumValueMatrix(int[] supply, int[] demand){
         minimumValueMatrix minima = new minimumValueMatrix();
         minima.assignValue(0,0,9999);
-        for(int i=0;i< valuesMatrix.length;i++){
-            for(int j=0;j< valuesMatrix[i].length;j++) {
-                if(valuesMatrix[i][j] < minima.value && demand[j]>0 && supply[i]>0) minima.assignValue(i,j,valuesMatrix[i][j]);
+        for(int index=0;index< valuesMatrix.length;index++){
+            for(int subIndex=0;subIndex< valuesMatrix[index].length;subIndex++) {
+                if(valuesMatrix[index][subIndex] < minima.value && demand[subIndex]>0 && supply[index]>0) minima.assignValue(index,subIndex,valuesMatrix[index][subIndex]);
             }
         }
         return minima;
