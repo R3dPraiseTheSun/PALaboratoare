@@ -1,0 +1,13 @@
+-classpath 'C:\\Users\\paula\\Desktop\\LABPA\\build\\classes\\java\\main;C:\\Users\\paula\\Desktop\\LABPA\\build\\resources\\main'
+-d 'C:\\Users\\paula\\Desktop\\LABPA\\build\\docs\\javadoc'
+-doctitle 'Lab2 1.0-SNAPSHOT API'
+-notimestamp 
+-quiet 
+-windowtitle 'Lab2 1.0-SNAPSHOT API'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Destination.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Factory.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Problem.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Solution.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Source.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\SourceTypes.java'
+'C:\\Users\\paula\\Desktop\\LABPA\\src\\main\\java\\pkg\\Warehouse.java'

@@ -168,7 +168,7 @@ extends java.lang.Object</pre>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../pkg/Solution.html#solveProblem--">solveProblem</a></span>()</code>
-<div class="block"><b>solveProblem()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran in primul rand traseele pe care algoritmul le vede cele mai bune,</br>
+<div class="block"><b>solveProblem()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran in primul rand traseele pe care algoritmul le vede cele mai bune,
  apoi se afiseaza demandul ramas in total din destinatii, apoi la final cand demandul ajunge la 0 programul afiseaza pe ecran costul total acumulat din trasee.</div>
 </td>
 </tr>
@@ -203,8 +203,8 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;Solution(<a href="../pkg/Source.html" title="class in pkg">Source</a>[]&nbsp;sources,
                 <a href="../pkg/Destination.html" title="class in pkg">Destination</a>[]&nbsp;destinations)</pre>
 <div class="block"><h3>Constructorul <b>Solution</b></h3>
- <p>Acest constructor mai intai verifica daca in sources si in destinations exista dubluri prin folosirea functiei "equals" overriten in clasele respective</br>
- dupa verificarea Source si Destination se asigneaza Source dupa sources.lentgh, la fel si in destination, </br>
+ <p>Acest constructor mai intai verifica daca in sources si in destinations exista dubluri prin folosirea functiei "equals" overriten in clasele respective
+ dupa verificarea Source si Destination se asigneaza Source dupa sources.lentgh, la fel si in destination,
  iar dupa asignarea sursei si destinatiei matricea care retine costul este asignata.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -258,12 +258,12 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>solveProblem</h4>
 <pre>public&nbsp;void&nbsp;solveProblem()</pre>
-<div class="block"><p><b>solveProblem()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran in primul rand traseele pe care algoritmul le vede cele mai bune,</br>
+<div class="block"><p><b>solveProblem()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran in primul rand traseele pe care algoritmul le vede cele mai bune,
  apoi se afiseaza demandul ramas in total din destinatii, apoi la final cand demandul ajunge la 0 programul afiseaza pe ecran costul total acumulat din trasee.</p>
 
  <h3>Metoda de rezolvare</h3>
- <p>Algoritmul folosit este unul gandit si facut de mine, acesta formeaza o matrice din care extrage minimul din matrice,</br>
- acest numar este verificat daca are demand pe coloana demand sau mai are supply pe linia de supply,</br>
+ <p>Algoritmul folosit este unul gandit si facut de mine, acesta formeaza o matrice din care extrage minimul din matrice,
+ acest numar este verificat daca are demand pe coloana demand sau mai are supply pe linia de supply,
  si daca aceste 2 conditii sunt trecute se scade din supply si din demand supply.ul necesar pentru a zeroriza demandul</p>
 
  <h3>De ce aceasta metoda de rezolvare?</h3>

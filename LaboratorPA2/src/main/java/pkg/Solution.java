@@ -25,8 +25,8 @@ public class Solution {
 
     /**
      * <h3>Constructorul <b>Solution</b></h3>
-     * <p>Acest constructor mai intai verifica daca in sources si in destinations exista dubluri prin folosirea functiei "equals" overriten in clasele respective</br>
-     * dupa verificarea Source si Destination se asigneaza Source dupa sources.lentgh, la fel si in destination, </br>
+     * <p>Acest constructor mai intai verifica daca in sources si in destinations exista dubluri prin folosirea functiei "equals" overriten in clasele respective
+     * dupa verificarea Source si Destination se asigneaza Source dupa sources.lentgh, la fel si in destination,
      * iar dupa asignarea sursei si destinatiei matricea care retine costul este asignata.</p>
      * @param sources este un tip de data <i>'Source[]'</i> care ofera solutiei sursele de unde se poate lua supply si costul traseelor.
      * @param destinations este un tip de data <i>'Destination[]</i> care ofera solutiei numele oraselor si demandul acestora.
@@ -77,12 +77,12 @@ public class Solution {
         System.out.format("%8s%s","","X|\n");
     }
     /**
-     * <p><b>solveProblem()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran in primul rand traseele pe care algoritmul le vede cele mai bune,</br>
+     * <p><b>solveProblem()</b> este o functie a clasei <i>'Solution'</i>, aceasta functie afiseaza pe ecran in primul rand traseele pe care algoritmul le vede cele mai bune,
      * apoi se afiseaza demandul ramas in total din destinatii, apoi la final cand demandul ajunge la 0 programul afiseaza pe ecran costul total acumulat din trasee.</p>
      *
      * <h3>Metoda de rezolvare</h3>
-     * <p>Algoritmul folosit este unul gandit si facut de mine, acesta formeaza o matrice din care extrage minimul din matrice,</br>
-     * acest numar este verificat daca are demand pe coloana demand sau mai are supply pe linia de supply,</br>
+     * <p>Algoritmul folosit este unul gandit si facut de mine, acesta formeaza o matrice din care extrage minimul din matrice,
+     * acest numar este verificat daca are demand pe coloana demand sau mai are supply pe linia de supply,
      * si daca aceste 2 conditii sunt trecute se scade din supply si din demand supply.ul necesar pentru a zeroriza demandul</p>
      *
      * <h3>De ce aceasta metoda de rezolvare?</h3>

@@ -1,3 +1,7 @@
+pkg/Destination.java
+ pkg.Destination
+pkg/SourceTypes.java
+ pkg.SourceTypes
 pkg/Problem.java
  pkg.Problem
 pkg/Solution.java
@@ -8,9 +12,5 @@ pkg/Warehouse.java
  pkg.Warehouse
 pkg/Factory.java
  pkg.Factory
-pkg/Destination.java
- pkg.Destination
-pkg/SourceTypes.java
- pkg.SourceTypes
 pkg/Source.java
  pkg.Source
