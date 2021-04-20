@@ -1,30 +1,47 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import Singleton.Singleton;
+import dao.movies.Movie;
+import dao.movies.MovieDAO;
+import dao.movies.MovieDAOImplemented;
+import exceltodb.ConvertExcelToDB;
+
+import java.io.IOException;
+import java.sql.*;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://localhost/test" ;
-        Connection connection = DriverManager.getConnection(url);
-        Statement statement = connection.createStatement();
+        MovieDAO movieDAO = new MovieDAOImplemented();
 
-        String sqlcmd = "CREATE TABLE MOVIES" +
-                "(id INTEGER not NULL, " +
-                " title VARCHAR(255), " +
-                " release_date DATE(), " +
-                " duration INTEGER, " +
-                " score INTEGER";
-        statement.executeUpdate(sqlcmd);
+        for(Movie movie : movieDAO.getEveryMovie()){
+            System.out.println(movie.toString());
+        }
+        System.out.println();
 
-        sqlcmd = "CREATE TABLE GENRES" +
-                 "(id INTEGER not NULL, " +
-                 " name VARCHAR(255), ";
-        statement.executeUpdate(sqlcmd);
+        //test entry
+        Movie test = new Movie(
+                11,
+                "TestTitle",
+                "2000-01-01",
+                99,
+                10
+        );
+        movieDAO.createMovieEntry(test);
 
-        sqlcmd = "CREATE TABLE CEVA";
-        statement.executeUpdate(sqlcmd);
+        for(Movie movie : movieDAO.getEveryMovie()){
+            System.out.println(movie.toString());
+        }
+        movieDAO.deleteMovie(test);
 
-        connection.close();
+        System.out.println();
+        for(Movie movie : movieDAO.getEveryMovie()){
+            System.out.println(movie.toString());
+        }
+
+        movieDAO.closeDBConn();
+
+/*        try {
+            new ConvertExcelToDB().convert();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }*/
     }
 }
